@@ -6,6 +6,12 @@
 }
 
 body {
-    background-color: var(--background);
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url("/images/bg.png");
+    background-position: right top;
     color: var(--text);
+    padding-left: 18%;
+    padding-right: 18%;
+    margin: 0px;
 }
