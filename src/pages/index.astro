@@ -2,6 +2,40 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="maddy/home">
-    <div></div>
+<Layout title="manni/home" path="home">
+    <div class="title">
+        <h2>Main Page</h2>
+    </div>
+    <div class="aboutme">
+        <h3>About Me</h3>
+    </div>
 </Layout>
+
+<style>
+    .aboutme {
+        margin-bottom: 20px;
+        border-bottom: 2px solid #fdf6ec;
+        border-top: 2px solid #fdf6ec;
+        background-color: #374341;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 5px;
+    }
+
+    .title {
+        margin-bottom: 20px;
+        border-bottom: 2px solid #fdf6ec;
+        border-top: 2px solid #fdf6ec;
+        background-color: #374341;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 10px;
+    }
+
+    h3,
+    h2 {
+        margin: 0;
+    }
+</style>

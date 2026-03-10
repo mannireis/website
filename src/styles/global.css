@@ -7,7 +7,7 @@
 
 body {
     background-image:
-        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        linear-gradient(rgba(25, 26, 25, 0.8), rgba(25, 26, 25, 0.8)),
         url("/images/bg.png");
     background-position: right top;
     color: var(--text);
