@@ -1,0 +1,25 @@
+---
+const { title } = Astro.props;
+---
+
+<div>
+    <h3>{title}</h3>
+</div>
+
+<style>
+    div {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-bottom: 4px solid #abcfa0;
+        border-top: 4px solid #abcfa0;
+        background-color: #374341;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 5px;
+    }
+
+    h3 {
+        margin: 0;
+    }
+</style>
