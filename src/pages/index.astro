@@ -23,12 +23,7 @@ import Header from "../components/Header.astro";
         <Separator />
         <div class="latest">
             <h4>Latest Update:</h4>
-            <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia
-                vero illum sapiente, illo recusandae nisi adipisci eius minus
-                impedit laboriosam error id in odit veritatis delectus
-                consequuntur dolorem nemo accusantium.
-            </p>
+            <p id="commit-message"></p>
         </div>
 
         <Header title="Projects:" />
@@ -50,3 +45,13 @@ import Header from "../components/Header.astro";
         text-align: center;
     }
 </style>
+
+<script>
+    fetch("https://api.github.com/repos/mannireis/website/commits/main")
+        .then((res) => res.json())
+        .then((data) => {
+            document.getElementById("commit-message").textContent =
+                data.commit.message;
+        })
+        .catch((err) => console.error(err));
+</script>
