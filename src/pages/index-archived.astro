@@ -31,27 +31,20 @@ import { featuredProjects } from "../data/projects";
 
         <Header title="Projects:" />
         <div class="projects">
-            {
-                featuredProjects.map((project) => (
-                    <ProjectCard
-                        title={project.title}
-                        description={project.description}
-                        image={project.image}
-                        github={project.github}
-                        tags={[...project.tags]}
-                    />
-                ))
-            }
-            <p class="view-more-proj">
-                <a href="/projects">View all projects</a>
-            </p>
+            {featuredProjects.map((project) => (
+                <ProjectCard
+                    title={project.title}
+                    description={project.description}
+                    image={project.image}
+                    github={project.github}
+                    tags={[...project.tags]}
+                />
+            ))}
+            <p class="view-more"><a href="/projects">View all projects</a></p>
         </div>
         <Header title="Posts:" />
         <div class="blog-posts">
-            <Posts limit={3} />
-            <div class="view-more-blog">
-                <a href="/blog">View all posts</a>
-            </div>
+            <Posts />
         </div>
     </div>
 </Layout>
@@ -70,15 +63,11 @@ import { featuredProjects } from "../data/projects";
     .projects {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 10px;
-        padding: 10px;
+        gap: 20px;
+        padding: 20px;
     }
-    .view-more-proj {
+    .view-more {
         grid-column: 1 / -1;
-    }
-
-    .view-more-blog {
-        margin: 20px;
     }
 </style>
 

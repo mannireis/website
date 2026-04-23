@@ -1,7 +1,41 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Separator from "../components/Separator.astro";
+import Header from "../components/Header.astro";
+import Posts from "../components/Posts.astro";
 ---
 
-<Layout title="manni/about" path="about">
-    <div></div>
+<Layout title="manni/about" path="about me :3">
+    <div class="content">
+        <div class="aboutmediv">
+            <p>
+                Haii im manni (they/them), a 14yo hacker. I like to make silly
+                and useful projects, check them <a href="/projects">here</a>.
+                I'm also homeschooled, I read a lot, I draw and talk a lot in
+                the <a href="https://hackclub.com/">hack club slack</a>. I'm
+                trying to write more too, go check them out <a href="blog/"
+                    >here</a
+                >. I really like Minecraft, PCBs, Kicad, Godot, Aseprite and
+                Celeste!! :3c
+                <br />
+            </p>
+            <p>
+                I also watch a bit too many Minecraft videos and spend way too
+                much time in YouTube. I procrastinate a lot, never finish
+                projects, make too many games, and always end up with another
+                idea for a new one. I like burple.
+            </p>
+        </div>
+        <Header title="Read my posts!!" />
+        <div>
+            <Posts />
+        </div>
+    </div>
 </Layout>
+
+<style>
+    .content {
+        text-align: center;
+        margin: 20px;
+    }
+</style>
