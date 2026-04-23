@@ -1,4 +1,7 @@
 ---
+const { description = "A silly 14yo website", image = "/images/website.png" } =
+    Astro.props;
+
 const { title } = Astro.props;
 const { path } = Astro.props;
 import "../styles/global.css";
@@ -14,6 +17,13 @@ import SidebarRight from "../components/SidebarRight.astro";
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
+
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={new URL(image, Astro.site)} />
+        <meta property="og:url" content={Astro.url} />
+        <meta property="og:type" content="website" />
+        <meta name="description" content={description} />
     </head>
     <body>
         <main>
