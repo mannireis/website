@@ -15,3 +15,20 @@ body {
     padding-right: 18%;
     margin: 0px;
 }
+
+a {
+    color: #fdf6ec;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fbedda;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: #abcfa0;
+}
+
+a:visited {
+    color: #fbedda;
+    text-decoration: none;
+}
