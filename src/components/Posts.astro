@@ -4,43 +4,38 @@ import FormattedDate from "../components/FormattedDate.astro";
 
 import "../styles/global.css";
 
-interface Props {
-    limit?: number;
-}
-
-const { limit } = Astro.props;
-
 const posts = (await getCollection("blog")).sort(
     (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
-
-const displayPosts = limit ? posts.slice(0, limit) : posts;
 ---
 
 <div>
     {
-        displayPosts.map((post) => (
-            <article class="post-card">
-                <a href={`/blog/${post.id}`} class="title-link">
-                    {post.data.title}
-                </a>
+        posts.map((post) => (
+            <a href={`/blog/${post.id.replace(/\.md$/, "")}`} class="post-card">
+                <p>{post.data.title}</p>
                 <p class="description">{post.data.description}</p>
                 <p class="meta">
                     Published on <FormattedDate date={post.data.pubDate} />
                 </p>
-            </article>
+            </a>
         ))
     }
 </div>
 
 <style>
     .post-card {
+        display: block;
         padding: 10px;
         border-radius: 10px;
         border: 3px solid #abcfa0;
         margin-top: 20px;
     }
-
+    .post-card:hover {
+        color: #fbedda;
+        text-decoration: none;
+        border-color: #fbedda;
+    }
     p {
         margin: 10px;
     }

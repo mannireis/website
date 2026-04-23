@@ -1,9 +1,9 @@
 ---
 import { getCollection } from "astro:content";
 
-const posts = (await getCollection("blog")).sort(
-    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-).slice(0, 5);
+const posts = (await getCollection("blog"))
+    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+    .slice(0, 5);
 ---
 
 <div class="container">
@@ -59,7 +59,7 @@ const posts = (await getCollection("blog")).sort(
     }
 
     .container {
-        border-right: 4px solid #374341;
+        border-right: 4px solid #abcfa0;
         background-color: #28312f;
     }
 </style>

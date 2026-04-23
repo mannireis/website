@@ -4,9 +4,10 @@ const { description = "A silly 14yo website", image = "/images/website.png" } =
 
 const { title } = Astro.props;
 const { path } = Astro.props;
+
+import { ViewTransitions } from "astro:transitions";
 import "../styles/global.css";
 import SidebarLeft from "../components/SidebarLeft.astro";
-import Head from "../components/Head.astro";
 import SidebarRight from "../components/SidebarRight.astro";
 ---
 
@@ -18,6 +19,8 @@ import SidebarRight from "../components/SidebarRight.astro";
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
 
+        <ViewTransitions />
+
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={new URL(image, Astro.site)} />
@@ -27,16 +30,21 @@ import SidebarRight from "../components/SidebarRight.astro";
     </head>
     <body>
         <main>
-            <img src="/images/cover.png" alt="cover" class="cover-img" />
+            <img
+                src="/images/cover.png"
+                alt="cover"
+                class="cover-img"
+                transition:persist
+            />
             <div class="grid-container">
-                <SidebarLeft />
-                <div class="main">
+                <SidebarLeft transition:persist />
+                <div class="main" transition:animate="fade">
                     <div class="title">
                         <h2>{path}</h2>
                     </div>
                     <slot />
                 </div>
-                <SidebarRight />
+                <SidebarRight transition:persist />
             </div>
         </main>
     </body>

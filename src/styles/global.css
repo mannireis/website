@@ -32,3 +32,7 @@ a:visited {
     color: #fbedda;
     text-decoration: none;
 }
+
+::view-transition-old() {
+    animation: none;
+}
