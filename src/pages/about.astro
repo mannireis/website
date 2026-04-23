@@ -27,14 +27,15 @@ import Posts from "../components/Posts.astro";
             </p>
         </div>
         <Header title="Read my posts!!" />
-        <div>
-            <Posts />
+        <div class="posts">
+            <Posts limit={3} />
         </div>
     </div>
 </Layout>
 
 <style>
-    .content {
+    .aboutmediv,
+    .posts {
         text-align: center;
         margin: 20px;
     }
