@@ -17,20 +17,26 @@ body {
 }
 
 a {
-    color: #fdf6ec;
+    color: var(--text);
     text-decoration: none;
 }
 
 a:hover {
-    color: #fbedda;
+    color: var(--text);
     text-decoration-line: underline;
     text-decoration-style: wavy;
-    text-decoration-color: #abcfa0;
+    text-decoration-color: var(--primary);
 }
 
 a:visited {
     color: #fbedda;
     text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: none;
 }
 
 ::view-transition-old() {

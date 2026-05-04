@@ -1,3 +1,8 @@
 .post-page {
     background-color: #28312f;
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+}

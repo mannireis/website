@@ -1,6 +1,7 @@
 ---
 import { type CollectionEntry, getCollection, render } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
+import "../../styles/post.css";
 
 export async function getStaticPaths() {
     const posts = await getCollection("blog");
@@ -17,7 +18,7 @@ const { Content } = await render(post);
 ---
 
 <Layout title={"blog/" + post.data.title} path={post.data.title}>
-    <div>
+    <div class="post-page">
         <Content />
     </div>
 </Layout>

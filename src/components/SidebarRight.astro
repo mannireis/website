@@ -1,12 +1,109 @@
 ---
-
+import Button from "../components/Button.astro";
 ---
 
-<div class="container"></div>
+<div class="container">
+    <h2>links</h2>
+    <a href="https://www.instagram.com/mannidoesarts/">instagram</a>
+    <a href="https://hackclub.com/">hack club</a>
+    <h2>buttons</h2>
+    <div class="button-grid">
+        <Button link="https://froppii.dev"
+            ><img src="https://froppii.dev/button.gif" alt="forpi :3" /></Button
+        >
+        <Button link="https://jos.gg"
+            ><img src="https://jos.gg/88x31s/jos.gif" alt="jos" /></Button
+        >
+        <Button link="https://milkcool.ru"
+            ><img
+                src="https://milkcool.ru/buttons/mybutton.gif"
+                alt="lily!"
+            /></Button
+        >
+        <Button link="https://irispond.net"
+            ><img
+                src="https://irispond.net/images/irisbutton.png"
+                alt="iris <3"
+            /></Button
+        >
+        <Button link="https://ingy.au"
+            ><img src="https://ingo.au/buttons/ingo.png" alt="ingo" /></Button
+        >
+        <Button link="https://lukasreis.com"
+            ><img
+                src="https://lukasreis.com/images/88x31/lukas.gif"
+                alt="lulas reis"
+            /></Button
+        >
+        <Button link="https://3kh0.net/"
+            ><img
+                src="https://lukasreis.com/images/88x31/3kh0.png"
+                alt="roro :3c"
+            /></Button
+        >
+        <Button link="https://mahadk.com/">
+            <img
+                src="https://lukasreis.com/images/88x31/skyfall.png"
+                alt="mahad "
+            /></Button
+        >
+        <Button link="https://aseprite.org"
+            ><img
+                src="https://lukasreis.com/images/88x31/aseprite.gif"
+                alt="aseprite"
+            /></Button
+        >
+        <Button link="https://godotengine.org/"
+            ><img
+                src="https://lukasreis.com/images/88x31/godot.gif"
+                alt="godot"
+            /></Button
+        >
+    </div>
+</div>
 
 <style>
     .container {
         border-left: 4px solid #abcfa0;
         background-color: #28312f;
+    }
+
+    h2 {
+        padding-left: 10px;
+        padding-top: 3px;
+        padding-bottom: 5px;
+        background-color: #374341;
+        border-bottom: 4px solid #abcfa0;
+        margin: 0;
+    }
+
+    a:hover {
+        color: #fbedda;
+        text-decoration: wavy underline #abcfa0;
+    }
+
+    a {
+        display: block;
+        color: #fdf6ec;
+        padding: 10px 0px 10px 10px;
+        background-color: #28312f;
+        border-left: 6px solid #374341;
+        border-bottom: 2px solid #374341;
+        text-decoration: none;
+    }
+
+    .button-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4px;
+        padding: 8px;
+    }
+
+    .button-grid :global(a) {
+        display: flex;
+        justify-content: center;
+        padding: 4px;
+        border-left: none;
+        border-bottom: none;
     }
 </style>

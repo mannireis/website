@@ -5,7 +5,7 @@ const { description = "A silly 14yo website", image = "/images/website.png" } =
 const { title } = Astro.props;
 const { path } = Astro.props;
 
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 import "../styles/global.css";
 import SidebarLeft from "../components/SidebarLeft.astro";
 import SidebarRight from "../components/SidebarRight.astro";
@@ -19,7 +19,7 @@ import SidebarRight from "../components/SidebarRight.astro";
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
 
-        <ViewTransitions />
+        <ClientRouter />
 
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />

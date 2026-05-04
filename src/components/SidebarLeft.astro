@@ -49,13 +49,20 @@ const posts = (await getCollection("blog"))
     }
 
     a {
-        display: block;
+        -webkit-line-clamp: 1;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+
+        line-clamp: 1;
+
         color: #fdf6ec;
         padding: 10px 0px 10px 10px;
         background-color: #28312f;
         border-left: 6px solid #374341;
         border-bottom: 2px solid #374341;
         text-decoration: none;
+        height: 1em;
     }
 
     .container {

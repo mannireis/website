@@ -18,11 +18,14 @@ const { title, description, image, github, tags } = Astro.props;
 
 <style>
     a:hover {
+        transition: transform 150ms linear;
         color: #fbedda;
         text-decoration: none;
         border-color: #fbedda;
+        transform: scale(1.05);
     }
     .project-card {
+        transition: transform 150ms linear;
         border: 3px solid var(--primary);
         border-radius: 10px;
         padding: 10px;

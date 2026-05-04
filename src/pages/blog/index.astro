@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import FormattedDate from "../../components/FormattedDate.astro";
 import Layout from "../../layouts/Layout.astro";
+import Posts from "../../components/Posts.astro";
 
 import "../../styles/global.css";
 
@@ -12,37 +13,11 @@ const posts = (await getCollection("blog")).sort(
 
 <Layout title="manni/blog" path="blog">
     <div class="content">
-        <p class="tagline">Check out my awesome blogs:</p>
-
-        {posts.length === 0 && <p class="empty">No posts yet :(</p>}
-
-        <div class="posts">
-            {
-                posts.map((post) => (
-                    <article class="post-card">
-                        <a href={`/blog/${post.id}`} class="title-link">
-                            {post.data.title}
-                        </a>
-                        <p class="description">{post.data.description}</p>
-                        <p class="meta">
-                            Published on{" "}
-                            <FormattedDate date={post.data.pubDate} />
-                        </p>
-                    </article>
-                ))
-            }
-        </div>
+        <Posts />
     </div>
 </Layout>
 
 <style>
-    .post-card {
-        padding: 10px;
-        border-radius: 10px;
-        border: 3px solid #abcfa0;
-        margin-top: 20px;
-    }
-
     p {
         margin: 10px;
     }

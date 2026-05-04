@@ -4,9 +4,11 @@ import FormattedDate from "../components/FormattedDate.astro";
 
 import "../styles/global.css";
 
-const posts = (await getCollection("blog")).sort(
-    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-);
+const { limit } = Astro.props;
+
+const posts = (await getCollection("blog"))
+    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+    .slice(0, limit);
 ---
 
 <div>
@@ -25,6 +27,7 @@ const posts = (await getCollection("blog")).sort(
 
 <style>
     .post-card {
+        transition: transform 150ms linear;
         display: block;
         padding: 10px;
         border-radius: 10px;
@@ -32,6 +35,8 @@ const posts = (await getCollection("blog")).sort(
         margin-top: 20px;
     }
     .post-card:hover {
+        transform: scale(1.05);
+        transition: transform 150ms linear;
         color: #fbedda;
         text-decoration: none;
         border-color: #fbedda;
