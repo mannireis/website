@@ -6,13 +6,12 @@ export default defineConfig({
     defaultStrategy: "viewport",
   },
   experimental: {
-    fonts: true,
+    fonts: [
+      {
+        provider: fontProviders.fontsource(),
+        name: "Lexend",
+        cssVariable: "--font-lexend",
+      },
+    ],
   },
-  fonts: [
-    {
-      provider: fontProviders.fontsource(),
-      name: "Lexend",
-      cssVariable: "--font-lexend",
-    },
-  ],
 });
