@@ -15,7 +15,7 @@ const posts = (await getCollection("blog"))
     {
         posts.map((post) => (
             <a href={`/blog/${post.id.replace(/\.md$/, "")}`} class="post-card">
-                <p>{post.data.title}</p>
+                <h4>{post.data.title}</h4>
                 <p class="description">{post.data.description}</p>
                 <p class="meta">
                     Published on <FormattedDate date={post.data.pubDate} />
@@ -26,6 +26,13 @@ const posts = (await getCollection("blog"))
 </div>
 
 <style>
+    .meta {
+        font-size: 0.75em;
+    }
+    h4 {
+        margin-bottom: 0;
+        margin-top: 5px;
+    }
     .post-card {
         transition: transform 150ms linear;
         display: block;
