@@ -1,3 +1,5 @@
+@import "@fontsource/lexend";
+
 :root {
     --primary: #abcfa0;
     --background: #28312f;
@@ -6,7 +8,7 @@
 }
 
 body {
-    font-family: var(--font-lexend), sans-serif;
+    font-family: "Lexend", sans-serif;
     background-image:
         linear-gradient(rgba(25, 26, 25, 0.8), rgba(25, 26, 25, 0.8)),
         url("/images/bg.png");
