@@ -49,12 +49,10 @@ const posts = (await getCollection("blog"))
     }
 
     a {
-        -webkit-line-clamp: 1;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
+        display: block;
         overflow: hidden;
-
-        line-clamp: 1;
+        text-overflow: ellipsis;
+        white-space: nowrap;
 
         color: #fdf6ec;
         padding: 10px 0px 10px 10px;
@@ -62,12 +60,13 @@ const posts = (await getCollection("blog"))
         border-left: 6px solid #374341;
         border-bottom: 2px solid #374341;
         text-decoration: none;
-        height: 1em;
     }
 
     .container {
         border-right: 4px solid #abcfa0;
         background-color: #28312f;
+        min-width: 0;
+        overflow: hidden;
     }
     @media (max-width: 750px) {
         .container {
