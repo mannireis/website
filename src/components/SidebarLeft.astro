@@ -6,7 +6,7 @@ const posts = (await getCollection("blog"))
     .slice(0, 5);
 ---
 
-<div class="container">
+<div class="container sidebar-left">
     <div>
         <h2>main</h2>
         <a href="/">home</a>
@@ -68,5 +68,10 @@ const posts = (await getCollection("blog"))
     .container {
         border-right: 4px solid #abcfa0;
         background-color: #28312f;
+    }
+    @media (max-width: 750px) {
+        .container {
+            border-right: none;
+        }
     }
 </style>

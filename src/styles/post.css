@@ -6,3 +6,9 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+hr {
+    height: 4px;
+    background-color: #abcfa0;
+    border: none;
+}

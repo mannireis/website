@@ -6,6 +6,7 @@ const { title } = Astro.props;
 const { path } = Astro.props;
 
 import { ClientRouter } from "astro:transitions";
+
 import "../styles/global.css";
 import SidebarLeft from "../components/SidebarLeft.astro";
 import SidebarRight from "../components/SidebarRight.astro";
@@ -62,7 +63,6 @@ import SidebarRight from "../components/SidebarRight.astro";
         background-color: #374341;
         display: flex;
         justify-content: center;
-
         padding: 10px;
     }
     .grid-container {
@@ -84,5 +84,29 @@ import SidebarRight from "../components/SidebarRight.astro";
     h3 {
         font-size: 16px;
         margin: 0;
+    }
+
+    @media (max-width: 750px) {
+        body {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .grid-container {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .grid-container > :global(:first-child) {
+            order: 2;
+        }
+
+        .grid-container > :global(:nth-child(2)) {
+            order: 1;
+        }
+
+        .grid-container > :global(:last-child) {
+            order: 3;
+        }
     }
 </style>
