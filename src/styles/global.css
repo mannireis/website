@@ -45,3 +45,10 @@ img {
 ::view-transition-old() {
     animation: none;
 }
+
+@media (max-width: 750px) {
+    body {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
