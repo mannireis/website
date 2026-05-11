@@ -42,4 +42,4 @@ Building took about 2 hours, but only because I spent a lot of time troubleshoot
 
 I used the keyboard for a while without a case, but then when I made the case, the printing wasn’t working for some reason. It was stringing a lot, and I only got it to work when my brother sliced it instead of me. Now it’s done yay.
 
-![photo](/images/keyboard.jpg)
+![photo](/images/keyboard.png)

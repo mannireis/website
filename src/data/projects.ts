@@ -30,5 +30,5 @@ export const projects = [
 ];
 
 export const featuredProjects = projects.filter((p) =>
-  p.tags.includes("featured"),
+  (p.tags as readonly string[]).includes("featured"),
 );

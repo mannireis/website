@@ -65,31 +65,31 @@ import Button from "../components/Button.astro";
 
 <style>
     .container {
-        border-left: 4px solid #abcfa0;
-        background-color: #28312f;
+        border-left: 4px solid var(--primary);
+        background-color: var(--background);
     }
 
     h2 {
         padding-left: 10px;
         padding-top: 3px;
         padding-bottom: 5px;
-        background-color: #374341;
-        border-bottom: 4px solid #abcfa0;
+        background-color: var(--foreground);
+        border-bottom: 4px solid var(--primary);
         margin: 0;
     }
 
     a:hover {
         color: #fbedda;
-        text-decoration: wavy underline #abcfa0;
+        text-decoration: wavy underline var(--primary);
     }
 
     a {
         display: block;
         color: #fdf6ec;
         padding: 10px 0px 10px 10px;
-        background-color: #28312f;
-        border-left: 6px solid #374341;
-        border-bottom: 2px solid #374341;
+        background-color: var(--background);
+        border-left: 6px solid var(--foreground);
+        border-bottom: 2px solid var(--foreground);
         text-decoration: none;
     }
 

@@ -19,9 +19,9 @@ const { title, description, image, github, tags } = Astro.props;
 <style>
     a:hover {
         transition: transform 150ms linear;
-        color: #fbedda;
+        color: var(--text);
         text-decoration: none;
-        border-color: #fbedda;
+        border-color: var(--text);
         transform: scale(1.05);
     }
     .project-card {

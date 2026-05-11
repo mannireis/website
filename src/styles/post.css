@@ -1,14 +1,14 @@
 .post-page {
-    background-color: #28312f;
+  background-color: #28312f;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 hr {
-    height: 4px;
-    background-color: #abcfa0;
-    border: none;
+  height: 4px;
+  background-color: #abcfa0;
+  border: none;
 }
