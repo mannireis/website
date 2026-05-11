@@ -9,7 +9,7 @@ export const projects = [
   {
     title: "Relic Keyboard",
     description: "A split keyboard i use everyday",
-    image: "/images/keyboard.jpg",
+    image: "/images/keyboard.png",
     github: "https://github.com/mannireis/relic",
     tags: ["featured", "hardware", "complete"] as const,
   },
@@ -17,8 +17,15 @@ export const projects = [
     title: "Subway Surface",
     description: "My submision for campfire lisbon",
     image: "/images/subway-surface.png",
-    github: "https://github.com/mannireis",
+    github: "github.com/mannireis/campfire",
     tags: ["featured", "software", "paused"] as const,
+  },
+  {
+    title: "Rhthim game",
+    description: "A awesome game im making",
+    image: "/images/under-construction.png",
+    github: "github.com/mannireis/",
+    tags: ["software", "paused"] as const,
   },
 ];
 
