@@ -1,55 +1,55 @@
 @import "@fontsource/lexend";
 
 :root {
-    --primary: #abcfa0;
-    --background: #28312f;
-    --foreground: #374341;
-    --text: #fdf6ec;
+  --primary: #abcfa0;
+  --background: #28312f;
+  --foreground: #374341;
+  --text: #fdf6ec;
 }
 
 body {
-    font-family: "Lexend", sans-serif;
-    background-image:
-        linear-gradient(rgba(25, 26, 25, 0.8), rgba(25, 26, 25, 0.8)),
-        url("/images/bg.png");
-    background-position: right top;
-    color: var(--text);
-    padding-left: 18%;
-    padding-right: 18%;
-    margin: 0px;
+  font-family: "Lexend", sans-serif;
+  background-image:
+    linear-gradient(rgba(25, 26, 25, 0.8), rgba(25, 26, 25, 0.8)),
+    url("/images/bg.png");
+  background-position: right top;
+  color: var(--text);
+  padding-left: 18%;
+  padding-right: 18%;
+  margin: 0px;
 }
 
 a {
-    color: var(--text);
-    text-decoration: none;
+  color: var(--text);
+  text-decoration: none;
 }
 
 a:hover {
-    color: var(--text);
-    text-decoration-line: underline;
-    text-underline-offset: 4px;
-    text-decoration-style: wavy;
-    text-decoration-color: var(--primary);
+  color: var(--text);
+  text-decoration-line: underline;
+  text-underline-offset: 4px;
+  text-decoration-style: wavy;
+  text-decoration-color: var(--primary);
 }
 
 a:visited {
-    color: #fbedda;
-    text-decoration: none;
+  color: #fbedda;
+  text-decoration: none;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
-    border: none;
+  max-width: 100%;
+  height: auto;
+  border: none;
 }
 
 ::view-transition-old() {
-    animation: none;
+  animation: none;
 }
 
 @media (max-width: 750px) {
-    body {
-        padding-left: 0px;
-        padding-right: 0px;
-    }
+  body {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
